@@ -30,12 +30,12 @@ $(document).ready(function () {
                 // console.log(response.events.event[i].description);
                 // console.log(response.events.event[i].venue_url);
 
-                $(".events-display").append("<div>Title:" + response.events.event[i].title + "</div>");
-                $(".events-display").append("<div>Venue Name:" + response.events.event[i].venue_name + "</div>");
-                $(".events-display").append("<div>City Name:" + response.events.event[i].city_name + "</div>");
-                $(".events-display").append("<div>Description:" + response.events.event[i].description + "</div>");
-                $(".events-display").append("<div>Venue Address:" + response.events.event[i].venue_address + "</div>");
-                $(".events-display").append("<div>Venue URL:" + response.events.event[i].venue_url + "</div>");            
+                $(".events-display").append("<div class='events-output-title'>Title:" + response.events.event[i].title + "</div>");
+                $(".events-display").append("<div class='events-output-venueName'>Venue Name:" + response.events.event[i].venue_name + "</div>");
+                $(".events-display").append("<div class='events-output-cityName'>City Name:" + response.events.event[i].city_name + "</div>");
+                $(".events-display").append("<div class='events-output-description'>Description:" + response.events.event[i].description + "</div>");
+                $(".events-display").append("<div class='events-output-venueAddress'>Venue Address:" + response.events.event[i].venue_address + "</div>");
+                $(".events-display").append("<div class='events-output-venueURL'>Venue URL:" + response.events.event[i].venue_url + "</div>");            
 
             }
         });
