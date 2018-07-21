@@ -20,16 +20,16 @@
                 <a href="#" class="brand-logo">City-Now</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
-                        <a href="#">Weather</a>
+                        <a href="#" class="standard-text-font-size">Weather</a>
                     </li>
                     <li>
-                        <a href="#">Events</a>
+                        <a href="#" class="standard-text-font-size">Events</a>
                     </li>
                     <li>
-                        <a href="#">News</a>
+                        <a href="#" class="standard-text-font-size">News</a>
                     </li>
                     <li>
-                        <a href="#">Tweets</a>
+                        <a href="#" class="standard-text-font-size">Tweets</a>
                     </li>
                 </ul>
             </div>
@@ -37,30 +37,71 @@
     </header>
 
     <main class="container">
-        <section class="section row weather-header">
-            <div class="row">
-                <h5>Weather</h5>
-            </div>
-            <p class="weather-display">Stuff</p>
+        <section>
+
+
+            <section class="user-submit">
+                <div class="row">
+                    <h5>Submit Your location!</h5>
+                </div>
+                <form>
+                    <input type="text" name="location-input"></input>
+                    <fieldset class="date-selector-area">
+                        <legend>Choose dates</legend>
+
+                        <div>
+                            <label for="start">Start</label>
+                            <input type="date" id="start" name="trip" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+                        </div>
+
+                        <div>
+                            <label for="end">End</label>
+                            <input type="date" id="end" name="trip" value="2018-07-29" min="2018-01-01" max="2018-12-31" />
+                        </div>
+
+                    </fieldset>
+                    <input type="submit" value="Submit" class="submit-button">
+                </form>
+            </section>
+
+
+            <div class="weather-divider"></div>
+            <section class="section weather-header">
+                <div class="row">
+                    <h5>Weather</h5>
+                </div>
+                <p class="weather-display">Stuff</p>
+            </section>
+
+
+            <div class="events-divider"></div>
+            <section class="section events-header">
+                <div class="row">
+                    <h5>Events</h5>
+                </div>
+                <p class="events-display">Stuff</p>
+            </section>
+
+
+            <div class="news-divider"></div>
+            <section class="section news-header">
+                <div class="row">
+                    <h5>News</h5>
+                </div>
+                <p class="news-display">Stuff</p>
+            </section>
+
+
+            <div class="twitter-divider"></div>
+            <section class="section twitter-header">
+                <div class="row">
+                    <h5>Twitter</h5>
+                </div>
+                <p class="twitter-display">Stuff</p>
+            </section>
+
         </section>
-        <section class="section row events-header">
-            <div class="row">
-                <h5>Events</h5>
-            </div>
-            <p class="events-display">Stuff</p>
-        </section>
-        <section class="section row news-header">
-            <div class="row">
-                <h5>News</h5>
-            </div>
-            <p class="news-display">Stuff</p>
-        </section>
-        <section class="section row twitter-header">
-            <div class="row">
-                <h5>Twitter</h5>
-            </div>
-            <p class="twitter-display">Stuff</p>
-        </section>
+
     </main>
 
 
