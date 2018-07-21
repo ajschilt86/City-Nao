@@ -17,8 +17,8 @@ $(document).ready(function () {
             // console.log(response.articles[i].title);
             // console.log(response.articles[i].url);
 
-            $(".test").append("<div>Title:" + response.articles[i].title + "</div>");
-            $(".test").append("<div>Title:" + response.articles[i].url + "</div>");
+            $(".news-display").append("<div>Title:" + response.articles[i].title + "</div>");
+            $(".news-display").append("<div>URL:<a href='" + response.articles[i].url + "'>Click here</a></div>");
 
         }
 })
