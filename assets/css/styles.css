@@ -12,13 +12,15 @@ html{
 * Utility classes
 */
 .u-center-box{
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 /********************** 
 * Header/Nav
 */
-
+.standard-text-font-size {
+    font-size: 1.5rem;
+}
 
 /********************** 
 * Main 
