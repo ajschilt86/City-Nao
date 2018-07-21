@@ -20,6 +20,7 @@ $(document).ready(function () {
 
         .then(function (response) {
             for (var i = 0; i < 10; i++) {
+
                 // console.log(response);
                 // console.log(response.events.event[i].title);
                 // console.log(response.events.event[i].venue_name);
@@ -34,6 +35,10 @@ $(document).ready(function () {
                 $(".test").append("<div>Title:" + response.events.event[i].description + "</div>");
                 $(".test").append("<div>Title:" + response.events.event[i].venue_name + "</div>");
                 $(".test").append("<div>Title:" + response.events.event[i].venue_url + "</div>");
+
+
+            
+
             }
 
         });
