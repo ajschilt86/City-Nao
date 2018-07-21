@@ -4,10 +4,11 @@ $(document).ready(function () {
 
     // variables
     var userInputLocation = $(".location").val().trim();
-    var userInputDate = $(".date").val().trim();
+    var userInputDateStart = $("#start").val();
+    var userInputDateEnd = $("#end").val();
 
     // url
-    var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=" + userInputLocation + "&date=" + userInputDate + "";
+    var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=" + userInputLocation + "&date=" + userInputDateStart + "-" + userInputDateEnd + " ";
     // var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=chicago&date=today";
 
     // ajax call
@@ -29,20 +30,14 @@ $(document).ready(function () {
                 // console.log(response.events.event[i].description);
                 // console.log(response.events.event[i].venue_url);
 
-                $(".test").append("<div>Title:" + response.events.event[i].title + "</div>");
-                $(".test").append("<div>Title:" + response.events.event[i].venue_name + "</div>");
-                $(".test").append("<div>Title:" + response.events.event[i].city_name + "</div>");
-                $(".test").append("<div>Title:" + response.events.event[i].description + "</div>");
-                $(".test").append("<div>Title:" + response.events.event[i].venue_name + "</div>");
-                $(".test").append("<div>Title:" + response.events.event[i].venue_url + "</div>");
-
-
-            
+                $(".events-display").append("<div>Title:" + response.events.event[i].title + "</div>");
+                $(".events-display").append("<div>Venue Name:" + response.events.event[i].venue_name + "</div>");
+                $(".events-display").append("<div>City Name:" + response.events.event[i].city_name + "</div>");
+                $(".events-display").append("<div>Description:" + response.events.event[i].description + "</div>");
+                $(".events-display").append("<div>Venue Address:" + response.events.event[i].venue_address + "</div>");
+                $(".events-display").append("<div>Venue URL:" + response.events.event[i].venue_url + "</div>");            
 
             }
-
         });
-
-
 
 });
