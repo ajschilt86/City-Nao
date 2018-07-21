@@ -19,13 +19,13 @@ $(document).ready(function () {
         
         .then(function (response) {
             for (var i = 0; i < 10; i++) {
-            console.log(response);
-            console.log(response.events.event[i].title);
-            console.log(response.events.event[i].venue_name);
-            console.log(response.events.event[i].city_name);       
-            console.log(response.events.event[i].venue_address);
-            console.log(response.events.event[i].description);
-            console.log(response.events.event[i].venue_url);
+            // console.log(response);
+            // console.log(response.events.event[i].title);
+            // console.log(response.events.event[i].venue_name);
+            // console.log(response.events.event[i].city_name);       
+            // console.log(response.events.event[i].venue_address);
+            // console.log(response.events.event[i].description);
+            // console.log(response.events.event[i].venue_url);
 
             $(".").append("<div>Title:" + response.events.event[i].title + "</div>")
             
