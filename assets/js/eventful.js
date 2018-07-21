@@ -2,9 +2,15 @@ $(document).ready(function () {
 
     // var APIKey = tBSgjN5gKzmXQqxq;
 
-   
-    var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&keywords=shows&location=Chicago&date=today";
 
+    
+    var location = $(".location").val().trim();
+    var date = $(".location").val().trim();
+    
+   
+    var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=" + location + "&date=" + date + "";
+
+   
     $.ajax({
         url: queryURL,
         dataType: 'jsonp',
@@ -20,16 +26,12 @@ $(document).ready(function () {
             console.log(response.events.event[i].venue_address);
             console.log(response.events.event[i].description);
             console.log(response.events.event[i].venue_url);
+
+            $(".").append("<div>Title:" + response.events.event[i].title + "</div>")
             
             }
 
         });
-
-
-
-
-
-
 
 
 
