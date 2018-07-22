@@ -7,7 +7,18 @@ html{
     font-size: 62.5%
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
 
+main {
+    flex: 1 0 auto;
+}
+   
 /********************** 
 * Utility classes
 */
@@ -15,11 +26,20 @@ html{
     margin: 0 auto;
 }
 
+.standard-text-font-size {
+    font-size: 1.5rem;
+}
+
 /********************** 
 * Header/Nav
 */
-.standard-text-font-size {
-    font-size: 1.5rem;
+
+nav {
+    background-color: #55c57a;
+}
+
+input{
+    color: white;
 }
 
 /********************** 
@@ -27,20 +47,67 @@ html{
 */
 
 .container{
+    overflow: visible;
     margin-top: 30px;
     font-size: 1.5rem;
 }
 
 /********************** 
+* Inputs
+*/
+
+.submit-button{
+    color: black;
+}
+
+/********************** 
+* Dividers
+*/
+
+.divider-size{
+    height: 50rem;
+}
+
+.weather-divider{
+    background-image: url(../images/bg-weather.jpeg);
+    background-size: contain;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.events-divider{
+    background-image: url(../images/bg-event.jpg);
+    background-size: contain;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.news-divider{
+    background-image: url(../images/bg-news.jpeg);
+    background-size: contain;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.twitter-divider{
+    background-image: url(../images/bg-twitter.jpeg);
+    background-size: contain;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.push{
+    height: 8rem;
+}
+
+/********************** 
 * Footer
 */
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
 
-  main {
-    flex: 1 0 auto;
-  }
-      
+.page-footer{
+    background-color: #55c57a;
+}
