@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    var userInputLocation = $(".location-input").val().trim();
+
     var weatherKey = "f8c9acba8f1055fb160d7c22d0474eb4";
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userInputLocation + "&appid=" + weatherKey;
@@ -14,12 +16,12 @@ $(document).ready(function () {
         var maxTemp = (response.main.temp_max - 273.15) * 1.8 + 32;
 
 
-        $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-        $(".main").html("Main Temp (F) : " + fahrenheit);
-        $(".min").html("Minimum Temp (F) : " + minTemp);
-        $(".max").html("Maximum Temp: " + maxTemp);
-        $(".description").html("Weather Condition: " + response.weather.description);
-        $(".humidity").html("Humidity: " + response.main.humidity);
+        $(".weather-display").append("<div class='weather-display-name'>" + response.name + " Weather Details</div>");
+        $(".weather-display").append("<div class='weather-display-main'>Main Temp (F) : " + fahrenheit + "</div>");
+        $(".weather-display").append("<div class='weather-display-min'>Minimum Temp (F) : " + minTemp + "</div>");
+        $(".weather-display").append("<div class='weather-display-max'>Maximum Temp: " + maxTemp + "</div>");
+        $(".weather-display").append("<div class='weather-display-condition'>Weather Condition: " + response.weather.description + "</div>");
+        $(".weather-display").append("<div class='weather-display-humidity'>Humidity: " + response.main.humidity + "</div>");
     })
 
 });
