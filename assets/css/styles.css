@@ -40,6 +40,19 @@ nav {
 
 input{
     color: white;
+    font-size: 2rem !important;
+}
+
+#location-input{
+    width: 25%;
+    font-size: 2rem;
+}
+
+label{
+    font-size: 2rem !important;
+}
+#dates-input{
+    width: 10%;
 }
 
 /********************** 
@@ -48,10 +61,13 @@ input{
 
 .container{
     overflow: visible;
-    margin-top: 30px;
     font-size: 1.5rem;
 }
 
+.container{
+    overflow: visible;
+    font-size: 1.5rem;
+}
 /********************** 
 * Inputs
 */
@@ -68,20 +84,38 @@ input{
     height: 55rem;
 }
 
+.icon{
+    font-size:30rem;
+    position: absolute;
+    top: 45%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.section-header{
+    font-size:10rem;
+    position: absolute;
+    bottom: -10%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 .weather-divider{
     background-image: url(../images/bg-weather.jpeg);
     background-size: contain;
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position:relative;
 }
-
 .events-divider{
     background-image: url(../images/bg-event.jpg);
     background-size: contain;
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position:relative;
 }
 
 .news-divider{
@@ -90,6 +124,7 @@ input{
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position:relative;
 }
 
 .twitter-divider{
@@ -98,12 +133,25 @@ input{
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position:relative;
 }
+
+/********************** 
+* Display-areas
+*/
+/* .weather-display{
+    text-align: center;
+    line-height: 3rem;
+    border: 5px solid white;
+} */
 
 .push{
     height: 8rem;
 }
 
+.push-small{
+    height: 5rem;
+}
 /********************** 
 * Footer
 */
