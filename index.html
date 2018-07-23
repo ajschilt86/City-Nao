@@ -13,7 +13,7 @@
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Font Awsome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
         crossorigin="anonymous">
@@ -24,20 +24,22 @@
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">City-Now</a>
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo">City-Now
+                    <i class="far fa-building"></i>
+                </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
-                        <a href="#" class="standard-text-font-size">Weather</a>
+                        <a href="#weather" class="standard-text-font-size">Weather</a>
                     </li>
                     <li>
-                        <a href="#" class="standard-text-font-size">Events</a>
+                        <a href="#events" class="standard-text-font-size">Events</a>
                     </li>
                     <li>
-                        <a href="#" class="standard-text-font-size">News</a>
+                        <a href="#news" class="standard-text-font-size">News</a>
                     </li>
                     <li>
-                        <a href="#" class="standard-text-font-size">Tweets</a>
+                        <a href="#twitter" class="standard-text-font-size">Tweets</a>
                     </li>
                 </ul>
             </div>
@@ -48,68 +50,76 @@
         <section>
 
 
+            <div class="push-small"></div>
             <section class="user-submit container">
                 <div class="row">
-                    Going somewhere? This site will be your one-stop-shop for current weather, events, and news from your destination! 
-                    All you have to do is submit a location and away you go!
+                    Going somewhere? This site will be your one-stop-shop for current weather, events, and news from your destination! All you
+                    have to do is submit a location and away you go!
                     <h5>Submit Your location!</h5>
                 </div>
-                <form>
-                    <input type="text" name="location-input" class="location-input"></input>
-                    <fieldset class="date-selector-area">
+                <form>  
+                    <input type="text" name="location-input" class="location-input" id="location-input" placeholder="City Name"></input>
+                    <fieldset class="date-selector-area" id="dates-input">
                         <legend>Choose dates</legend>
 
                         <div>
                             <label for="start">Start</label>
-                            <input type="date" id="start" name="trip" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+                            <input type="date" id="start" name="trip"/>
                         </div>
 
                         <div>
                             <label for="end">End</label>
-                            <input type="date" id="end" name="trip" value="2018-07-29" min="2018-01-01" max="2018-12-31" />
+                            <input type="date" id="end" name="trip"/>
                         </div>
 
                     </fieldset>
-                    <input type="submit" value="Submit" class="submit-button">
+                    <button type="submit" value="Submit" class="submit-button">Submit</button>
                 </form>
             </section>
             <div class="push"></div>
 
 
-            <div class="weather-divider divider-size"></div>
+            <div class="weather-divider divider-size" id="weather">
+                <i class="fas fa-sun icon"></i>
+                <h5 class="section-header">Weather</h5>
+            </div>
             <section class="section weather-header container">
                 <div class="row">
-                    <h5>Weather</h5>
                 </div>
-                <p class="weather-display">Stuff</p>
+                <p class="weather-display"></p>
                 <div class="push"></div>
             </section>
 
 
-            <div class="events-divider divider-size"></div>
+            <div class="events-divider divider-size" id="events">
+                <i class="fas fa-users icon"></i>
+                <h5 class="section-header">Events</h5>
+            </div>
             <section class="section events-header container">
                 <div class="row">
-                    <h5>Events</h5>
                 </div>
-                <p class="events-display">Stuff</p>
+                <p class="events-display"></p>
                 <div class="push"></div>
             </section>
 
 
-            <div class="news-divider divider-size"></div>
+            <div class="news-divider divider-size" id="news">
+                <i class="fas fa-newspaper icon"></i>
+                <h5 class="section-header">News</h5>
+            </div>
             <section class="section news-header container">
                 <div class="row">
-                    <h5>News</h5>
                 </div>
-                <p class="news-display">Stuff</p>
+                <p class="news-display"></p>
                 <div class="push"></div>
             </section>
 
 
-            <div class="twitter-divider divider-size"></div>
+            <div class="twitter-divider divider-size" id="twitter">
+                <h5 class="section-header">Twitter</h5>
+            </div>
             <section class="section twitter-header container">
                 <div class="row">
-                    <h5>Twitter</h5>
                 </div>
                 <p class="twitter-display">Stuff</p>
                 <div class="push"></div>
