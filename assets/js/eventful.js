@@ -33,7 +33,7 @@ $(document).ready(function () {
                 // console.log(response.events.event[i].venue_url);
 
                 $(".events-display").append(
-                      "<section class='events-output'><div>Title: " + response.events.event[i].title + "</div>"
+                      "<section class='events-output'><div class='event-title'>" + response.events.event[i].title + "</div>"
                     + "<div>Date: " + response.events.event[i].start_time + "</div>"
                     + "<div>Venue Name: " + response.events.event[i].venue_name + "</div>"
                     + "<div>City Name: " + response.events.event[i].city_name + "</div>"
