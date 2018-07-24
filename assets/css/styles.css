@@ -91,8 +91,13 @@ fieldset{
 
 .submit-button{
     margin-top: 2rem;
+    background-color: #55c57a;
 }
 
+.submit-button:hover{
+    background-color: #55c57a;
+    -webkit-filter: brightness(80%);
+}
 /********************** 
 * Main 
 */
@@ -223,10 +228,82 @@ fieldset{
     background-color: #55c57a;
 }
 
+
+@media (max-width: 950px){
+    .divider-size{
+        height: 40rem;
+    }
+
+    .icon{
+        font-size:20rem;
+        position: absolute;
+        top: 45%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .section-header{
+        font-size:11rem;
+        position: absolute;
+        bottom: -10%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+@media (max-width: 750px){
+    .divider-size{
+        height: 30rem;
+    }
+
+    .icon{
+        font-size:17rem;
+        position: absolute;
+        top: 45%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .section-header{
+        font-size:7rem;
+        position: absolute;
+        bottom: -10%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
 @media (max-width: 590.5px){
+    .divider-size{
+        height: 20rem;
+    }
+
+    .icon{
+        font-size:10rem;
+        position: absolute;
+        top: 45%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .section-header{
+        font-size:5rem;
+        position: absolute;
+        bottom: -10%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
     .fa-building{
         position: absolute;
         top: 30%;
         left: -30%;
     }
 }
+
