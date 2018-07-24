@@ -39,7 +39,8 @@ $(document).ready(function () {
                     + "<div>City Name: " + response.events.event[i].city_name + "</div>"
                     + "<div>Description: " + response.events.event[i].description + "</div>"
                     + "<div>Venue Address: " + response.events.event[i].venue_address + "</div>"
-                    + "<div>Venue URL: <a href='" + response.events.event[i].venue_url + "'target='_blank'>Click here</a></div></section>");
+                    + "<div>Venue URL: <a href='" + response.events.event[i].venue_url + "'target='_blank'>Click here</a></div>"
+                    + "<div class = 'news-attribution'><a href='http://api.eventful.com/' target='_blank'>Powered by Eventful API</div></section>");
             }
         });
     });

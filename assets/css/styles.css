@@ -18,7 +18,7 @@ body {
 main {
     flex: 1 0 auto;
 }
-   
+
 /********************** 
 * Utility classes
 */
@@ -143,6 +143,7 @@ label{
     margin: 3rem auto;
     line-height: 1.5;
     border: 2px solid #55c57a;
+    border-radius: 5px;
     padding: 1rem;
 }
 
@@ -150,6 +151,7 @@ label{
     margin: 3rem auto;
     line-height: 1.5;
     border: 2px solid #55c57a;
+    border-radius: 5px;
     padding: 1rem;
     margin: 0 auto;
 }
@@ -158,6 +160,7 @@ label{
     margin: 3rem auto;
     line-height: 1.5;
     border: 2px solid #55c57a;
+    border-radius: 5px;
     padding: 1rem;
     margin: 0 auto;
 }
