@@ -21,14 +21,21 @@ $(document).ready(function () {
         }).then(function (response) {
 
             for (var i = 0; i < 5; i++) {
-                // console.log(response);
+                console.log(response);
                 // console.log(response.articles[i].title);
                 // console.log(response.articles[i].url);
+                if (response.articles.length === 0) {
+                    $(".news-display").append(
+                        "<div class = no-news> Sorry, there are no articles for this location!</div>");
+                    return;
+                }
+                else (
+                    $(".news-display").append(
+                        "<section class = 'news-output'><div class = 'news-title'>" + response.articles[i].title + "</div>" +
+                        "<div>Description: " + response.articles[i].description + "</div>"
+                        + "<div>URL: <a href='" + response.articles[i].url + "'target='_blank'>Click here</a></div>" +
+                        "<div class = 'news-attribution'><a href='https://newsapi.org/' target='_blank'>Powered by News API</div></section>"));
 
-                $(".news-display").append(
-                    "<section class = 'news-output'><div class = 'news-title'>" + response.articles[i].title + "</div>" +
-                    "<div>Description: " + response.articles[i].description + "</div>"
-                    + "<div>URL: <a href='" + response.articles[i].url + "'target='_blank'>Click here</a></div></section>");
 
             }
         });
