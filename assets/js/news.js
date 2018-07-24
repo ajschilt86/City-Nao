@@ -26,7 +26,7 @@ $(document).ready(function () {
                 // console.log(response.articles[i].url);
 
                 $(".news-display").append(
-                    "<section class = 'news-output'><div>Title: " + response.articles[i].title + "</div>" +
+                    "<section class = 'news-output'><div class = 'news-title'>" + response.articles[i].title + "</div>" +
                     "<div>Description: " + response.articles[i].description + "</div>"
                     + "<div>URL: <a href='" + response.articles[i].url + "'target='_blank'>Click here</a></div></section>");
 
