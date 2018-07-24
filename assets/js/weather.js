@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 
             $(".weather-display").append(
-                "<section class='weather-output'><div>" + response.name + " Weather Details</div>" +
+                "<section class='weather-output'><div class = 'weather-location'>" + response.name + " Weather Details</div>" +
                 "<div>Main Temp (F): " + fahrenheit + "</div>" +
                 "<div>Minimum Temp (F): " + minTemp + "</div>" +
                 "<div>Maximum Temp (F): " + maxTemp + "</div>" +
