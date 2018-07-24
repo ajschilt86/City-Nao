@@ -2,6 +2,10 @@
 * Globals
 */
 
+a, button, input {
+    cursor: pointer;
+}
+
 html{
     /* This sets 1rem = 10px*/
     font-size: 62.5%
@@ -19,6 +23,11 @@ main {
     flex: 1 0 auto;
 }
 
+h2 {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+}
+
 /********************** 
 * Utility classes
 */
@@ -26,10 +35,21 @@ main {
     margin: 0 auto;
 }
 
-.standard-text-font-size {
+.u-horz-padding{
+    padding: 0 .5rem;
+}
+
+.u-text-font-size {
     font-size: 1.5rem;
 }
 
+.u-center-text{
+    text-align: center;
+}
+
+.u-green-color{
+    color: #55c57a;
+}
 /********************** 
 * Header/Nav
 */
@@ -38,21 +58,39 @@ nav {
     background-color: #55c57a;
 }
 
+
+/********************** 
+* Welcome and Inputs
+*/
+
+.welcome-area{
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
 input{
     color: white;
     font-size: 2rem !important;
 }
 
-#location-input{
-    width: 25%;
-    font-size: 2rem;
+fieldset{
+    border: 2px solid #55c57a;
+    width: 25rem;
+    margin: 0 auto;
+    padding: 3rem;
 }
 
-label{
-    font-size: 2rem !important;
+.date-selector-area{
+    margin-top: 5rem;
 }
-#dates-input{
-    width: 10%;
+
+#location-input{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.submit-button{
+    margin-top: 2rem;
 }
 
 /********************** 
@@ -67,13 +105,6 @@ label{
 .container{
     overflow: visible;
     font-size: 1.5rem;
-}
-/********************** 
-* Inputs
-*/
-
-.submit-button{
-    color: black;
 }
 
 /********************** 
@@ -139,21 +170,33 @@ label{
 /********************** 
 * Display-areas
 */
-.events-output{
-    margin: 3rem auto;
-    line-height: 1.5;
-    border: 2px solid #55c57a;
-    border-radius: 5px;
-    padding: 1rem;
-}
-
 .weather-output{
     margin: 3rem auto;
     line-height: 1.5;
     border: 2px solid #55c57a;
     border-radius: 5px;
     padding: 1rem;
-    margin: 0 auto;
+    width: 70rem;
+}
+
+.weather-location {
+    font-size: 3rem;
+    color: #55c57a;
+}
+
+.events-output{
+    margin: 3rem auto;
+    line-height: 1.5;
+    border: 2px solid #55c57a;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-y: scroll;
+    height: 20rem;
+}
+
+.event-title{
+    font-size: 3rem;
+    color: #55c57a;
 }
 
 .news-output{
@@ -178,4 +221,12 @@ label{
 
 .page-footer{
     background-color: #55c57a;
+}
+
+@media (max-width: 590.5px){
+    .fa-building{
+        position: absolute;
+        top: 30%;
+        left: -30%;
+    }
 }

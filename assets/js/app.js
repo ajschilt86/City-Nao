@@ -15,8 +15,10 @@ $(document).ready(function () {
         $("#start").attr("value", today);
         $("#end").attr("value", today);
     }
+    //Call the above function
     getNewDate();
 
+    //If a user clicks enter submit form
     $('body').on("keydown", ".location-input", function (e) {
         if (e.which == 13) {
             event.preventDefault();
@@ -24,8 +26,12 @@ $(document).ready(function () {
         }
     });
 
+    //When submit is clicked, clear location-input
     $('body').on("click", ".submit-button", function(e) {
         $(".location-input").val("");
     });
-    
+
+
+    //Making side nav work in materialize
+    $('.sidenav').sidenav();
 });
