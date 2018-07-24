@@ -28,7 +28,7 @@ $(document).ready(function () {
                 $(".news-display").append(
                     "<section class = 'news-output'><div>Title: " + response.articles[i].title + "</div>" +
                     "<div>Description: " + response.articles[i].description + "</div>"
-                    + "<div>URL: <a href='" + response.articles[i].url + "'>Click here</a></div></section>");
+                    + "<div>URL: <a href='" + response.articles[i].url + "'target='_blank'>Click here</a></div></section>");
 
             }
         });
