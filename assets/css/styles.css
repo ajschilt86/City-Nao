@@ -139,11 +139,28 @@ label{
 /********************** 
 * Display-areas
 */
-/* .weather-display{
-    text-align: center;
-    line-height: 3rem;
-    border: 5px solid white;
-} */
+.events-output{
+    margin: 3rem auto;
+    line-height: 1.5;
+    border: 2px solid #55c57a;
+    padding: 1rem;
+}
+
+.weather-output{
+    margin: 3rem auto;
+    line-height: 1.5;
+    border: 2px solid #55c57a;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.news-output{
+    margin: 3rem auto;
+    line-height: 1.5;
+    border: 2px solid #55c57a;
+    padding: 1rem;
+    margin: 0 auto;
+}
 
 .push{
     height: 8rem;
