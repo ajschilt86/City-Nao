@@ -1,4 +1,59 @@
 $(document).ready(function () {
+    var states = [
+        "AK",
+        "AL",
+        "AR",
+        "AZ",
+        "CA",
+        "CO",
+        "CT",
+        "DC",
+        "DE",
+        "FL",
+        "GA",
+        "HI",
+        "IA",
+        "ID",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "LA",
+        "MA",
+        "MD",
+        "ME",
+        "MI",
+        "MN",
+        "MO",
+        "MS",
+        "MT",
+        "NC",
+        "ND",
+        "NE",
+        "NH",
+        "NJ",
+        "NM",
+        "NV",
+        "NY",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "VT",
+        "WA",
+        "WI",
+        "WV",
+        "WY"];
+        states.forEach(function(element){
+            $(".state-input").append("<option value='"+ element +"'>" + element + "</option>")
+        })
 
     //This will set the dates at start and end to the current day.
     function getNewDate() {
@@ -29,11 +84,13 @@ $(document).ready(function () {
     });
 
     //When submit is clicked, clear location-input
-    $('body').on("click", ".submit-button", function(e) {
+    $('body').on("click", ".submit-button", function (e) {
         $(".location-input").val("");
     });
 
-
-    //Making side nav work in materialize
+    //Making side nav and select work in materialize
     $('.sidenav').sidenav();
+    $('select').formSelect();
+
+    
 });
