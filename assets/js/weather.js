@@ -24,11 +24,11 @@ $(document).ready(function () {
 
             $(".weather-display").append(
                 "<section class='weather-output'><div class = 'weather-location'>" + response.name + " Weather Details</div>" +
-                "<div>Main Temp (F): " + fahrenheit + "</div>" +
-                "<div>Minimum Temp (F): " + minTemp + "</div>" +
-                "<div>Maximum Temp (F): " + maxTemp + "</div>" +
+                "<div>Main Temp (F): " + fahrenheit + "°</div>" +
+                "<div>Minimum Temp (F): " + minTemp + "°</div>" +
+                "<div>Maximum Temp (F): " + maxTemp + "°</div>" +
                 "<div>Weather Condition: " + response.weather[0].main + "</div>" +
-                "<div>Humidity: " + response.main.humidity + "</div></section>");
+                "<div>Humidity: " + response.main.humidity + "%</div></section>");
         });
     });
 });
