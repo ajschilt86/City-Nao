@@ -78,6 +78,11 @@ fieldset{
     width: 25rem;
     margin: 0 auto;
     padding: 3rem;
+    color: white
+}
+
+.date{
+    color: white;
 }
 
 .date-selector-area{
@@ -181,7 +186,7 @@ fieldset{
     border: 2px solid #55c57a;
     border-radius: 5px;
     padding: 1rem;
-    width: 70rem;
+    width: 40rem;
 }
 
 .weather-location {
@@ -204,6 +209,11 @@ fieldset{
     color: #55c57a;
 }
 
+.news-title{
+    font-size: 3rem;
+    color: #55c57a;
+}
+
 .news-output{
     margin: 3rem auto;
     line-height: 1.5;
@@ -211,6 +221,13 @@ fieldset{
     border-radius: 5px;
     padding: 1rem;
     margin: 0 auto;
+}
+
+.no-news{
+    font-size: 3rem;
+    color: #f08a5d;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 .push{
@@ -223,6 +240,10 @@ fieldset{
 /********************** 
 * Footer
 */
+
+#footer-logo{
+    font-size: 5rem;
+}
 
 .page-footer{
     background-color: #55c57a;

@@ -66,14 +66,15 @@
         <section>
 
 
-            <div class="push-small"></div>
+            <div class="push-small" id="to-the-top"></div>
             <section class="user-submit container">
                 <div class="row">
                     <h2 class="u-center-text margin-bottom">Welcome to
                         <span class="u-green-color">City Now!</span>
                     </h2>
-                    <p class="welcome-area"><span class="u-green-color">Going somewhere?</span> This site will be your one-stop-shop for current weather, events, and news from your
-                        destination! All you have to do is submit a location and away you go!
+                    <p class="welcome-area">
+                        <span class="u-green-color">Going somewhere?</span> This site will be your one-stop-shop for current weather, events, and news
+                        from your destination! All you have to do is submit a location and away you go!
                     </p>
                 </div>
                 <fieldset class="date-selector-area" id="dates-input">
@@ -81,13 +82,13 @@
                     <legend class="u-horz-padding">Destination</legend>
 
                     <div>
-                        <label for="start">Start</label>
-                        <input type="date" id="start" name="trip" />
+                        <label for="start">Start Date</label>
+                        <input type="date" id="start" name="trip" class="date" />
                     </div>
 
                     <div>
-                        <label for="end">End</label>
-                        <input type="date" id="end" name="trip" />
+                        <label for="end">End Date</label>
+                        <input type="date" id="end" name="trip" class="date" />
                     </div>
                     <button class="btn waves-effect waves-light submit-button" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
@@ -152,10 +153,15 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">City Now</h5>
+                    <a href="#to-the-top" class="brand-logo">
+                        <h5 class="white-text"  id="footer-logo">
+                            <i class="far fa-building"></i>
+                            City Now
+                        </h5>
+                    </a>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
+                    <h5 class="white-text">Directory</h5>
                     <ul>
                         <li>
                             <a class="grey-text text-lighten-3" href="#weather">Weather</a>

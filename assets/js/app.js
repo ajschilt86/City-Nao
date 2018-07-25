@@ -21,7 +21,7 @@ $(document).ready(function () {
     //If a user clicks enter submit form
     $('body').on("keydown", ".location-input", function (e) {
         if (e.which == 13) {
-            event.preventDefault();
+            $('.btn').click();
             $(".location-input").val("");
         }
     });
