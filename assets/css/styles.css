@@ -78,7 +78,11 @@ fieldset{
     width: 25rem;
     margin: 0 auto;
     padding: 3rem;
-    color: white
+    color: white;
+}
+
+select{
+    color: #55c57a;
 }
 
 .date{
@@ -328,6 +332,7 @@ fieldset{
     }
     .weather-output{
         width: 35rem;
+        margin: 0 auto;
     }
     
     .weather-location {
