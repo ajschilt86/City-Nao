@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <!-- Materialize JS -->
@@ -23,6 +25,12 @@
 </head>
 
 <body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="modal-text"></p>
+        </div>
+    </div>
     <header class="navbar-fixed">
         <!---->
         <nav>
@@ -77,13 +85,13 @@
                         from your destination! All you have to do is submit a location and away you go!
                     </p>
                 </div>
-                <fieldset class="date-selector-area" id="dates-input">
-                    <input type="text" name="location-input" class="location-input" id="location-input" placeholder="City Name"></input>
+                <fieldset class="date-selector-area" id="data-input">
+                    <input type="text" name="location-input" class="location-input" id="location-input" placeholder="City Name" required></input>
                     <legend class="u-horz-padding">Destination</legend>
 
                     <div class="input-field col s12">
-                        <select class = "state-input">
-                            <option value="" selected>Choose your state</option>
+                        <select class="state-input">
+                            <option value="no-state-selected" selected>Choose your state</option>
                         </select>
                         <label>Choose your State</label>
                     </div>
@@ -194,6 +202,7 @@
     </footer>
 
 </body>
+<script src="./assets/js/validation.js"></script>
 <script src="./assets/js/eventful.js"></script>
 <script src="./assets/js/news.js"></script>
 <script src="./assets/js/twitter.js"></script>

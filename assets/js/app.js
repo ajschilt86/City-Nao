@@ -67,10 +67,8 @@ $(document).ready(function () {
         if (day < 10) day = "0" + day;
 
         var today = year + "-" + month + "-" + day;
-        $("#start").addClass("date")
-        $("#start").attr("value", today);
-        $("#end").addClass("date")
-        $("#end").attr("value", today);
+        $("#start").val(today);
+        $("#end").val(today);
     }
     //Call the above function
     getNewDate();
@@ -79,13 +77,7 @@ $(document).ready(function () {
     $('body').on("keydown", ".location-input", function (e) {
         if (e.which == 13) {
             $('.btn').click();
-            $(".location-input").val("");
         }
-    });
-
-    //When submit is clicked, clear location-input
-    $('body').on("click", ".submit-button", function (e) {
-        $(".location-input").val("");
     });
 
     //Making side nav and select work in materialize
