@@ -24,9 +24,9 @@ $(document).ready(function () {
                 console.log(response);
                 // console.log(response.articles[i].title);
                 // console.log(response.articles[i].url);
-                if (response.articles.length === 0) {
+                if (response.totalResults === 0) {
                     $(".news-display").append(
-                        "<div class = no-news> Sorry, there are no articles for this location!</div>");
+                        "<div class = 'no-news'> Sorry, there are no articles for this location!</div>");
                     return;
                 }
                 else (
