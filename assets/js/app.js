@@ -12,7 +12,9 @@ $(document).ready(function () {
         if (day < 10) day = "0" + day;
 
         var today = year + "-" + month + "-" + day;
+        $("#start").addClass("date")
         $("#start").attr("value", today);
+        $("#end").addClass("date")
         $("#end").attr("value", today);
     }
     //Call the above function
