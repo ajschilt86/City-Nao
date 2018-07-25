@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>City Now</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Font Awsome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
         crossorigin="anonymous">
@@ -22,59 +23,77 @@
 </head>
 
 <body>
-    <header>
+    <header class="navbar-fixed">
+        <!---->
         <nav>
             <div class="nav-wrapper container">
                 <a href="#" class="brand-logo">City-Now
                     <i class="far fa-building"></i>
                 </a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
-                        <a href="#weather" class="standard-text-font-size">Weather</a>
+                        <a href="#weather" class="u-text-font-size">Weather</a>
                     </li>
                     <li>
-                        <a href="#events" class="standard-text-font-size">Events</a>
+                        <a href="#events" class="u-text-font-size">Events</a>
                     </li>
                     <li>
-                        <a href="#news" class="standard-text-font-size">News</a>
+                        <a href="#news" class="u-text-font-size">News</a>
                     </li>
                     <!--<li>
-                        <a href="#twitter" class="standard-text-font-size">Tweets</a>
+                        <a href="#twitter" class="u-text-font-size">Tweets</a>
                     </li>-->
                 </ul>
             </div>
         </nav>
     </header>
+    <ul class="right sidenav" id="mobile-nav">
+        <li>
+            <a href="#weather">Weather</a>
+        </li>
+        <li>
+            <a href="#events">Events</a>
+        </li>
+        <li>
+            <a href="#news">News</a>
+        </li>
+    </ul>
 
     <main>
         <section>
 
 
-            <div class="push-small"></div>
+            <div class="push-small" id="to-the-top"></div>
             <section class="user-submit container">
                 <div class="row">
-                    Going somewhere? This site will be your one-stop-shop for current weather, events, and news from your destination! All you
-                    have to do is submit a location and away you go!
-                    <h5>Submit Your location!</h5>
+                    <h2 class="u-center-text margin-bottom">Welcome to
+                        <span class="u-green-color">City Now!</span>
+                    </h2>
+                    <p class="welcome-area">
+                        <span class="u-green-color">Going somewhere?</span> This site will be your one-stop-shop for current weather, events, and news
+                        from your destination! All you have to do is submit a location and away you go!
+                    </p>
                 </div>
-                <form>  
+                <fieldset class="date-selector-area" id="dates-input">
                     <input type="text" name="location-input" class="location-input" id="location-input" placeholder="City Name"></input>
-                    <fieldset class="date-selector-area" id="dates-input">
-                        <legend>Choose dates</legend>
+                    <legend class="u-horz-padding">Destination</legend>
 
-                        <div>
-                            <label for="start">Start</label>
-                            <input type="date" id="start" name="trip"/>
-                        </div>
+                    <div>
+                        <label for="start">Start Date</label>
+                        <input type="date" id="start" name="trip" class="date" />
+                    </div>
 
-                        <div>
-                            <label for="end">End</label>
-                            <input type="date" id="end" name="trip"/>
-                        </div>
-
-                    </fieldset>
-                    <button type="submit" value="Submit" class="submit-button">Submit</button>
-                </form>
+                    <div>
+                        <label for="end">End Date</label>
+                        <input type="date" id="end" name="trip" class="date" />
+                    </div>
+                    <button class="btn waves-effect waves-light submit-button" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </fieldset>
             </section>
             <div class="push"></div>
 
@@ -134,10 +153,15 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">City Now</h5>
+                    <a href="#to-the-top" class="brand-logo">
+                        <h5 class="white-text"  id="footer-logo">
+                            <i class="far fa-building"></i>
+                            City Now
+                        </h5>
+                    </a>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
+                    <h5 class="white-text">Directory</h5>
                     <ul>
                         <li>
                             <a class="grey-text text-lighten-3" href="#weather">Weather</a>

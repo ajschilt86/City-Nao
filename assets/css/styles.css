@@ -2,6 +2,10 @@
 * Globals
 */
 
+a, button, input {
+    cursor: pointer;
+}
+
 html{
     /* This sets 1rem = 10px*/
     font-size: 62.5%
@@ -19,6 +23,11 @@ main {
     flex: 1 0 auto;
 }
 
+h2 {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+}
+
 /********************** 
 * Utility classes
 */
@@ -26,10 +35,21 @@ main {
     margin: 0 auto;
 }
 
-.standard-text-font-size {
+.u-horz-padding{
+    padding: 0 .5rem;
+}
+
+.u-text-font-size {
     font-size: 1.5rem;
 }
 
+.u-center-text{
+    text-align: center;
+}
+
+.u-green-color{
+    color: #55c57a;
+}
 /********************** 
 * Header/Nav
 */
@@ -38,23 +58,51 @@ nav {
     background-color: #55c57a;
 }
 
+
+/********************** 
+* Welcome and Inputs
+*/
+
+.welcome-area{
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
 input{
     color: white;
     font-size: 2rem !important;
 }
 
+fieldset{
+    border: 2px solid #55c57a;
+    width: 25rem;
+    margin: 0 auto;
+    padding: 3rem;
+    color: white
+}
+
+.date{
+    color: white;
+}
+
+.date-selector-area{
+    margin-top: 5rem;
+}
+
 #location-input{
-    width: 25%;
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-label{
-    font-size: 2rem !important;
-}
-#dates-input{
-    width: 10%;
+.submit-button{
+    margin-top: 2rem;
+    background-color: #55c57a;
 }
 
+.submit-button:hover{
+    background-color: #55c57a;
+    -webkit-filter: brightness(80%);
+}
 /********************** 
 * Main 
 */
@@ -67,13 +115,6 @@ label{
 .container{
     overflow: visible;
     font-size: 1.5rem;
-}
-/********************** 
-* Inputs
-*/
-
-.submit-button{
-    color: black;
 }
 
 /********************** 
@@ -139,21 +180,38 @@ label{
 /********************** 
 * Display-areas
 */
-.events-output{
-    margin: 3rem auto;
-    line-height: 1.5;
-    border: 2px solid #55c57a;
-    border-radius: 5px;
-    padding: 1rem;
-}
-
 .weather-output{
     margin: 3rem auto;
     line-height: 1.5;
     border: 2px solid #55c57a;
     border-radius: 5px;
     padding: 1rem;
-    margin: 0 auto;
+    width: 40rem;
+}
+
+.weather-location {
+    font-size: 3rem;
+    color: #55c57a;
+}
+
+.events-output{
+    margin: 3rem auto;
+    line-height: 1.5;
+    border: 2px solid #55c57a;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-y: scroll;
+    height: 20rem;
+}
+
+.event-title{
+    font-size: 3rem;
+    color: #55c57a;
+}
+
+.news-title{
+    font-size: 3rem;
+    color: #55c57a;
 }
 
 .news-output{
@@ -163,6 +221,13 @@ label{
     border-radius: 5px;
     padding: 1rem;
     margin: 0 auto;
+}
+
+.no-news{
+    font-size: 3rem;
+    color: #f08a5d;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 .push{
@@ -176,6 +241,98 @@ label{
 * Footer
 */
 
+#footer-logo{
+    font-size: 5rem;
+}
+
 .page-footer{
     background-color: #55c57a;
 }
+
+
+@media (max-width: 950px){
+    .divider-size{
+        height: 40rem;
+    }
+
+    .icon{
+        font-size:20rem;
+        position: absolute;
+        top: 45%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .section-header{
+        font-size:11rem;
+        position: absolute;
+        bottom: -10%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+@media (max-width: 750px){
+    .divider-size{
+        height: 30rem;
+    }
+
+    .icon{
+        font-size:17rem;
+        position: absolute;
+        top: 45%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .section-header{
+        font-size:7rem;
+        position: absolute;
+        bottom: -10%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+@media (max-width: 590.5px){
+    .divider-size{
+        height: 20rem;
+    }
+
+    .icon{
+        font-size:10rem;
+        position: absolute;
+        top: 45%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .section-header{
+        font-size:5rem;
+        position: absolute;
+        bottom: -10%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .fa-building{
+        position: absolute;
+        top: 30%;
+        left: -30%;
+    }
+    .weather-output{
+        width: 35rem;
+    }
+    
+    .weather-location {
+        font-size: 2rem;
+        color: #55c57a;
+    }
+}
+

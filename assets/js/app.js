@@ -12,20 +12,28 @@ $(document).ready(function () {
         if (day < 10) day = "0" + day;
 
         var today = year + "-" + month + "-" + day;
+        $("#start").addClass("date")
         $("#start").attr("value", today);
+        $("#end").addClass("date")
         $("#end").attr("value", today);
     }
+    //Call the above function
     getNewDate();
 
+    //If a user clicks enter submit form
     $('body').on("keydown", ".location-input", function (e) {
         if (e.which == 13) {
-            event.preventDefault();
+            $('.btn').click();
             $(".location-input").val("");
         }
     });
 
+    //When submit is clicked, clear location-input
     $('body').on("click", ".submit-button", function(e) {
         $(".location-input").val("");
     });
-    
+
+
+    //Making side nav work in materialize
+    $('.sidenav').sidenav();
 });
