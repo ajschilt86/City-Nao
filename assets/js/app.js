@@ -113,7 +113,18 @@ $(document).ready(function () {
         if (day < 10) day = "0" + day;
 
         var today = year + "-" + month + "-" + day;
-
+        
+        if (userInputLocation.length < 5 || typeof(userInputLocation) !== "number" ) {
+            modal.show();
+            modalText.text("Please enter a valid, 5 digit zip code!");
+            return false;
+        }
+        if (userInputLocation.length >= 6) {
+            modal.show();
+            modalText.text("Please enter a valid, 5 digit zip code!");
+            return false;
+        }
+        
         //If the user doesn't enter a city
         if (userInputLocation !== "" && /*userInputState !== "no-state-selected" &&*/ moment(userInputDateStart).isSameOrAfter(today) && moment(userInputDateEnd).isSameOrAfter(today)) {
             /*$(".news-display").empty();
