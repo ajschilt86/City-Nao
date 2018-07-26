@@ -103,7 +103,6 @@ $(document).ready(function () {
         var weatherURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + userInputLocation + ",us&appid=" + weatherKey;
         var eventfulURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=" + userInputLocation + "&date=" + userInputDateStart + "-" + userInputDateEnd + " ";
 
-
         var date = new Date();
         var day = date.getDate();
         var month = date.getMonth() + 1;
@@ -114,7 +113,7 @@ $(document).ready(function () {
 
         var today = year + "-" + month + "-" + day;
         
-        if (userInputLocation.length < 5 || typeof(userInputLocation) !== "number" ) {
+        if (userInputLocation.length < 5 ) {
             modal.show();
             modalText.text("Please enter a valid, 5 digit zip code!");
             return false;
@@ -124,7 +123,26 @@ $(document).ready(function () {
             modalText.text("Please enter a valid, 5 digit zip code!");
             return false;
         }
-        
+        if (userInputLocation === "") {
+            modal.show();
+            modalText.text("Please enter a valid zip code!");
+            return false;
+        } 
+        userInputLocation = parseInt(userInputLocation);
+        if (typeof userInputLocation !== "number" ) {
+            modal.show();
+            modalText.text("Please enter a valid zip code!");
+            return false;
+        }
+        /*  if (userInputState === "no-state-selected") {
+            modal.show();
+            modalText.text("Please select a state");
+            return false;
+        }*/ if (moment(today).isAfter(userInputDateStart) || moment(today).isAfter(userInputDateEnd)) {
+            modal.show();
+            modalText.text("Please be sure your date comes after the current one");
+            return false;
+        }
         //If the user doesn't enter a city
         if (userInputLocation !== "" && /*userInputState !== "no-state-selected" &&*/ moment(userInputDateStart).isSameOrAfter(today) && moment(userInputDateEnd).isSameOrAfter(today)) {
             /*$(".news-display").empty();
@@ -189,19 +207,7 @@ $(document).ready(function () {
                         + "<div class = 'news-attribution'><a href='http://api.eventful.com/' target='_blank'>Powered by Eventful API</div></section>");
                 }
             });
-        } else if (userInputLocation === "" || userInputLocation.length<5) {
-            modal.show();
-            modalText.text("Please enter a valid zip code!");
-            return false;
-        }/* else if (userInputState === "no-state-selected") {
-            modal.show();
-            modalText.text("Please select a state");
-            return false;
-        }*/ else if (moment(today).isAfter(userInputDateStart) || moment(today).isAfter(userInputDateEnd)) {
-            modal.show();
-            modalText.text("Please be sure your date comes after the current one");
-            return false;
-        }
+        } 
     });
     //Making side nav and select work in materialize
     $('.sidenav').sidenav();
