@@ -9,7 +9,9 @@ $(document).ready(function () {
 
         var weatherKey = "f8c9acba8f1055fb160d7c22d0474eb4";
 
-        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userInputLocation + "&appid=" + weatherKey;
+        // var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userInputLocation + "&appid=" + weatherKey;
+
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + userInputLocation + ",us&appid=" + weatherKey;
 
         $.ajax({
             url: queryURL,
