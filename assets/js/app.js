@@ -83,6 +83,7 @@ $(document).ready(function () {
     //Making side nav and select work in materialize
     $('.sidenav').sidenav();
     $('select').formSelect();
+    AOS.init();
 
     
 });
