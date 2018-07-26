@@ -202,15 +202,42 @@ select{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+.events-header{
+    display:none;
+}
+.weather-header{
+    display:none;
+}
 .weather-divider{
+    display:none;
+    opacity: 0;
     background-image: url(../images/bg-weather.jpeg);
     background-size: contain;
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position:relative;
+    animation: moveInDown 1s ease-in;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .events-divider{
+    display:none;
     background-image: url(../images/bg-event.jpg);
     background-size: contain;
     background-position: fixed;
@@ -220,6 +247,7 @@ select{
 }
 
 .news-divider{
+    display:none;
     background-image: url(../images/bg-news.jpeg);
     background-size: contain;
     background-position: fixed;
@@ -229,6 +257,7 @@ select{
 }
 
 .twitter-divider{
+    display:none;
     background-image: url(../images/bg-twitter.jpeg);
     background-size: contain;
     background-position: fixed;
@@ -275,6 +304,7 @@ select{
 }
 
 .news-output{
+    display:none;
     margin: 3rem auto;
     line-height: 1.5;
     border: 2px solid #55c57a;

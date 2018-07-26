@@ -170,6 +170,14 @@ $(document).ready(function () {
                             "<div class = 'news-attribution'><a href='https://newsapi.org/' target='_blank'>Powered by News API</div></section>"));
                 }
             });*/
+
+            $(".events-header").show();
+            $(".events-divider").show();
+            $(".events-output").show();
+            $(".weather-header").show();
+            $(".weather-divider").show();
+            $(".weather-output").show();
+            
             $.ajax({
                 url: weatherURL,
                 method: "GET"
