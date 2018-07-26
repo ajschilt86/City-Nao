@@ -6,12 +6,12 @@ $(document).ready(function () {
         $(".events-display").empty();
 
         var userInputLocation = $(".location-input").val().trim();
-        var userInputState = $(".state-input").val().trim();
+        // var userInputState = $(".state-input").val().trim();
         var userInputDateStart = $("#start").val();
         var userInputDateEnd = $("#end").val();
         // var APIKey = tBSgjN5gKzmXQqxq;
 
-        console.log(userInputLocation);
+        // console.log(userInputLocation);
         // url
         var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=" + userInputLocation + "&date=" + userInputDateStart + "-" + userInputDateEnd + " ";
 
