@@ -159,7 +159,7 @@ $(document).ready(function () {
                     // console.log(response.articles[i].url);
                     if (response.totalResults === 0) {
                         $(".news-display").append(
-                            "<div class = 'no-news'> Sorry, there are no articles for this location!</div>");
+                            "<div class = 'no-news' data-aos='zoom-in-down'> Sorry, there are no articles for this location!</div>");
                         return;
                     }
                     else (
@@ -207,7 +207,7 @@ $(document).ready(function () {
                 for (var i = 0; i < 10; i++) {
                     if (response.total_items === "0") {
                         $(".events-display").append(
-                            "<div class = 'no-news'> Sorry, there are no events for this location!</div>");
+                            "<div class = 'no-news' data-aos='zoom-in-down'> Sorry, there are no events for this location!</div>");
                         return;
                     }
                     else (
