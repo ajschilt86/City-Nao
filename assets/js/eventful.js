@@ -13,7 +13,7 @@ $(document).ready(function () {
 
         console.log(userInputLocation);
         // url
-        var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=" + userInputLocation + "," + userInputState + "&date=" + userInputDateStart + "-" + userInputDateEnd + " ";
+        var queryURL = "https://api.eventful.com/json/events/search?app_key=tBSgjN5gKzmXQqxq&location=" + userInputLocation + "&date=" + userInputDateStart + "-" + userInputDateEnd + " ";
 
         // ajax call
 
