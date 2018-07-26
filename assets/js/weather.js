@@ -17,7 +17,6 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
 
             var fahrenheit = parseFloat((response.main.temp - 273.15) * 1.8 + 32).toFixed(1);
             var minTemp = parseFloat((response.main.temp_min - 273.15) * 1.8 + 32).toFixed(1);
