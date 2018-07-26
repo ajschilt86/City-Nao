@@ -11,8 +11,6 @@ $(document).ready(function () {
         // This queryURL is for the actual working website//
         var queryURL = "https://newsapi.org/v2/top-headlines?q=" + userInputLocation + "&language=en&apiKey=" + newsKey;
 
-        // This queryURL is for the testing of the API//
-        // var queryURL = "https://newsapi.org/v2/top-headlines?q=trump&apiKey=" + newsKey;
 
         $.ajax({
             url: queryURL,
@@ -21,6 +19,7 @@ $(document).ready(function () {
         }).then(function (response) {
 
             for (var i = 0; i < 10; i++) {
+
                 if (response.totalResults === 0) {
                     $(".news-display").append(
                         "<div class = 'no-news'> Sorry, there are no articles for this location!</div>");
