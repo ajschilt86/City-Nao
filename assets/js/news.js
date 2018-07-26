@@ -31,7 +31,7 @@ $(document).ready(function () {
                 }
                 else (
                     $(".news-display").append(
-                        "<section class = 'news-output'><div class = 'news-title'>" + response.articles[i].title + "</div>" +
+                        "<section class = 'news-output' data-aos='zoom-in-down'><div class = 'news-title'>" + response.articles[i].title + "</div>" +
                         "<div>Description: " + response.articles[i].description + "</div>"
                         + "<div>URL: <a href='" + response.articles[i].url + "'target='_blank'>Click here</a></div>" +
                         "<div class = 'news-attribution'><a href='https://newsapi.org/' target='_blank'>Powered by News API</div></section>"));
