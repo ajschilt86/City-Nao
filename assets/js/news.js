@@ -9,7 +9,7 @@ $(document).ready(function () {
 
         var newsKey = "73e7379dace64c0589551c94ccba7ab8";
         // This queryURL is for the actual working website//
-        var queryURL = "https://newsapi.org/v2/top-headlines?q=" + userInputLocation + "&apiKey=" + newsKey;
+        var queryURL = "https://newsapi.org/v2/top-headlines?q=" + userInputLocation + "&language=en&apiKey=" + newsKey;
 
         // This queryURL is for the testing of the API//
         // var queryURL = "https://newsapi.org/v2/top-headlines?q=trump&apiKey=" + newsKey;
@@ -20,7 +20,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
 
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 10; i++) {
                 console.log(response);
                 // console.log(response.articles[i].title);
                 // console.log(response.articles[i].url);
