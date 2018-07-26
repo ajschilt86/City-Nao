@@ -195,16 +195,23 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
                 $(".events-display").empty();
+                console.log(response);
                 for (var i = 0; i < 10; i++) {
-                    $(".events-display").append(
-                          "<section class='events-output'data-aos='zoom-in-down'><div class='event-title'>" + response.events.event[i].title + "</div>"
-                        + "<div>Date: " + response.events.event[i].start_time + "</div>"
-                        + "<div>Venue Name: " + response.events.event[i].venue_name + "</div>"
-                        + "<div>City Name: " + response.events.event[i].city_name + "</div>"
-                        + "<div>Description: " + response.events.event[i].description + "</div>"
-                        + "<div>Venue Address: " + response.events.event[i].venue_address + "</div>"
-                        + "<div>Venue URL: <a href='" + response.events.event[i].venue_url + "'target='_blank'>Click here</a></div>"
-                        + "<div class = 'news-attribution'><a href='http://api.eventful.com/' target='_blank'>Powered by Eventful API</div></section>");
+                    if (response.total_items === "0") {
+                        $(".events-display").append(
+                            "<div class = 'no-news'> Sorry, there are no events for this location!</div>");
+                        return;
+                    }
+                    else (
+                        $(".events-display").append(
+                            "<section class='events-output'data-aos='zoom-in-down'><div class='event-title'>" + response.events.event[i].title + "</div>"
+                            + "<div>Date: " + response.events.event[i].start_time + "</div>"
+                            + "<div>Venue Name: " + response.events.event[i].venue_name + "</div>"
+                            + "<div>City Name: " + response.events.event[i].city_name + "</div>"
+                            + "<div>Description: " + response.events.event[i].description + "</div>"
+                            + "<div>Venue Address: " + response.events.event[i].venue_address + "</div>"
+                            + "<div>Venue URL: <a href='" + response.events.event[i].venue_url + "'target='_blank'>Click here</a></div>"
+                            + "<div class = 'news-attribution'><a href='http://api.eventful.com/' target='_blank'>Powered by Eventful API</div></section>"));
                 }
             });
         } 
