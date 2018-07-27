@@ -269,6 +269,11 @@ select{
 /********************** 
 * Display-areas
 */
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 .weather-output{
     margin: 3rem auto;
     line-height: 1.5;
