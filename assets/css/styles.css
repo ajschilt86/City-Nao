@@ -154,6 +154,15 @@ select{
     margin-bottom: 2rem;
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .submit-button{
     margin-top: 2rem;
     background-color: #55c57a;
